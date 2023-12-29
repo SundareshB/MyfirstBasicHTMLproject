@@ -69,14 +69,43 @@ img {
 a:hover img {
     transform: scale(1.1); /* Scale up on hover */
 }
+section {
+            padding: 20px;
+            text-align: left;
+            background-color: #fff; /* Light background color */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        h2 {
+            color: #556270; /* Darker text color */
+        }
+
+        p {
+            color: #333; /* Default text color */
+        }
+        .circle-button {
+            background-color: #ff6b6b;
+            color: #fff;
+            border:none;
+            border-radius: 10%;
+            padding: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            position:absolute;
+            left: 20px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        }
+
 </style>  
 </head>
 <body>
 <nav> <a href="https://www.instagram.com/football.partner7?igshid=OGQ5ZDc2ODk2ZA==">
-  <h1>FOOTBALL PARTNERS</h1>
-</a>
+  <h1>FOOTBALL PARTNERS</h1></a>
+  
 <div class="right-side">
-  <a href="contact.html">CONTACT  </a>
+  <a href="#contact">CONTACT  </a>
   <a href="https://www.instagram.com/football.partner7?igshid=OGQ5ZDc2ODk2ZA==">INSTAGRAM</a>
   <!-- Add more sections as needed -->
 </div>
@@ -105,9 +134,35 @@ a:hover img {
         <h1>shoes <br>shoesshoesshoesshoesshoes</h1>
       </a><br><br>
      
+      <button class="circle-button" onclick="goToTop()">↑</button>
+
+    <section>
+      <center>
+        <h2>About </h2>
+        <p>abcdgnrfugfgf fgflkg </p>
+      </center>  
+    </section>
+    
+    <!-- Contact Section -->
+    <section>
+    <center>
+        <h2>Contact </h2>
+        <p>fggf sgb fgf bgf</p>
+      </center>
+    </section>
+
+
+<a id="contact">
+
+</a>
   <br><br>
   
     </center>
+    <script>
+      function goToTop() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+  </script>
     
 </body>
 </html>
