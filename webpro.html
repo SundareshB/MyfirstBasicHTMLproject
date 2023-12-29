@@ -1,165 +1,238 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>SHAZAM</title>
-<style>
- 
-body{
-margin:0;
-background-color: #000000;
-}
-nav{
-background:#740445;
-width:100%;
-overflow:auto;
-}
-ul{
-margin:0;
-padding:0;
-list-style:none;
-}
-li{
-float:left;
-}
-nav a{
-width:120px;
-display:block;
-text-decoration:none;
-text-align:center;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Styles for the slider container */
+          
+        nav {
+            background: linear-gradient(to right, #ff6b6b, #556270);
+            width: 100%;
+            overflow: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            padding: 0 20px;
+            box-sizing: border-box;
+            color: #fff;
+        }
+        nav .right-side {
+            display: flex;
+            gap: 10px;
+        }
 
-}
-.gallery img{
-width:670px;
-height:250px;
-}
-.desc{
-padding:15px;
-text-align:center;
-font-weight:bold;
-font-size:20px;
-}
-footer{
-padding:10px;
+        nav .right-side a {
+          text-decoration: none;
+            color: #fff;
+            font-weight: bold ;
+            transition: color 0.3s, font-weight 0.3s;
+        }
 
-}
+        nav .right-side a:hover {
+            text-decoration: none;
+            color: #ddd;
+            font-weight: bold;
+        }
 
-h1
-{
-  color: white;
-}
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: normal;
+            transition: color 0.3s, font-weight 0.3s;
+        }
 body {
-  background-image: url("bg.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+    background-color: #f2f2f2; /* Light gray background */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Default text color */
 }
-</style>
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+.back{
+            margin-left: 10px;
+            text-decoration: none;
+            color: #555;
+            font-weight: bold ;
+            transition: color 0.3s, font-weight 0.3s;
+        }
+
+.back:hover {
+    text-decoration: none;
+            color: #a49494;
+            font-weight: bold;
+}
+
+        .slider-container {
+            width: 400px;
+            margin: auto;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        /* Styles for the slider wrapper to hold all images */
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 300%; /* Set the width to three times the container width (for three images) */
+        }
+
+        /* Style for each image in the slider */
+        .slider-item {
+            width: 100%; /* Set the width to match the container */
+            height: 550px; /* Set a fixed height */
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .slider-item img {
+            width: 100%; /* Make the image fill the container */
+            height: 100%;
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+        }
+
+        /* Style for the navigation buttons (prev/next) */
+        .slider-btn {
+            cursor: pointer;
+            position:absolute;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            background-color: #333;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
+        }
+        
+
+.dot-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Add some top margin for spacing */
+}
+
+/* Style for each dot */
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Active dot style */
+.active-dot {
+    background-color: #717171;
+}
+        
+        
+    </style>
 </head>
-
 <body>
-<nav>
-<ul>
-
-  <a href="main.html">
-    <img src="sha.png" height="70" width="230">
+    
+ <nav> <a href="https://www.instagram.com/football.partner7?igshid=OGQ5ZDc2ODk2ZA==">
+    <h1>FOOTBALL PARTNERS</h1>
   </a>
-</ul>
-</nav><br><br><br><br>
-<center>
-
-  <a href="star.html">
-    <img src="star.jpg"  height="400" width="400">
-  </a><br><br>
-  <audio controls>
-    <source src="starboy.mp3" type="audio/mpeg">
-  </audio><br>
-  <h1>Starboy <br>Song By The Weeknd,Daft Punk</h1>
-  <br><br>
-
-  <a href="soft.html">
-    <img src="soft.png"  height="400" width="400">
-  </a><br><br>
-  <audio controls>
-    <source src="softcore.mp3" type="audio/mpeg">
-  </audio><br>
-  <h1>Softcore <br>Song by The Neighbourhood </h1>
-  <br><br>
-
-  <a href="after.html">
-    <img src="after.png"   height="400" width="400">
-  </a><br><br>
-  <audio controls>
-    <source src="after.mp3" type="audio/mpeg">
-  </audio><br>
-  <h1>After Hours <br>Song By The Weeknd</h1>
-  <br><br>
-
-  <a href="right.html">
-    <img src="right.png"   height="400" width="400">
-  </a><br><br>
-  <audio controls>
-    <source src="right.mp3" type="audio/mpeg">
-  </audio><br>
-  <h1>Right Now na na na <br>Song By Akon</h1>
-  <br><br>
-
-  <a href="mind.html">
-    <img src="mind.png"   height="400" width="400">
-  </a><br><br>
-  <audio controls>
-    <source src="murder .mp3" type="audio/mpeg">
-  </audio><br>
-  <h1>Murder In My Mind <br>Song by Kordhell</h1>
-  <br><br>
-
-  <a href="light.html">
-    <img src="after.png"   height="400" width="400">
-  </a><br><br>
-  <audio controls>
-    <source src="lights.mp3" type="audio/mpeg">
-  </audio><br>
-  <h1>Blinding Lights<br>Song By The Weeknd</h1>
-  <br><br>
-
-  <a href="guru.html">
-    <img src="guru.png"   height="400" width="400">
-  </a><br><br>
-  <audio controls>
-    <source src="infinity.mp3" type="audio/mpeg">
-  </audio><br>
-  <h1>Infinity<br>Song by Guru Josh</h1>
-  <br><br>
-
-  <a href="meta.html">
-    <img src="meta.png"  height="400" width="400">
-  </a><br><br>
-  <audio controls>
-    <source src="meta.mp3" type="audio/mpeg">
-  </audio><br>
-  <h1>Metamorphosis<br>Song by Interworld</h1>
-  <br><br>
-
-  <a href="die.html">
-    <img src="star.jpg"   height="400" width="400">
-  </a><br><br>
-  <audio controls>
-    <source src="Die For You .mp3" type="audio/mpeg">
-  </audio><br>
-  <h1>Die for You <br>Song by The Weeknd </h1>
-  <br><br>
-
-  <a href="moth.html">
-    <img src="dawn.png"   height="400" width="400">
-  </a><br><br>
-  <audio controls>
-    <source src="Moth To A Flame.mp3" type="audio/mpeg">
-  </audio><br>
-  <h1>Moth to a Flame <br>Song by Swedish House Mafia ,The Weeknd </h1>
-  <br><br>
-
+  <div class="right-side">
+    <a href="contact.html">CONTACT  </a>
+    <a href="https://www.instagram.com/football.partner7?igshid=OGQ5ZDc2ODk2ZA==">INSTAGRAM</a>
+    <!-- Add more sections as needed -->
+  </div>
+  </nav>  <br>
+  <!--BACK BUTTON-->
   
+    <a  class="back" href="football.html">BACK</a> 
+<br><br><br> 
+
+<div class="slider-container">
+    <div class="slider-wrapper">
+        <div class="slider-item"><img src="f1.jpg" alt="Image 1"></div>
+        <div class="slider-item"><img src="f1.jpg" alt="Image 2"></div>
+        <div class="slider-item"><img src="f1.jpg" alt="Image 3"></div>
+        <!-- Add more slider items with different images -->
+    </div>
+    <button class="slider-btn prev-btn" onclick="prevSlide()">&#10094;</button>
+    <button class="slider-btn next-btn" onclick="nextSlide()">&#10095;</button>
+
+</div>
+ <div class="dot-container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+</div>
 
 
-   </center>
 
-</footer>
+<script>
+   let currentIndex = 0;
+
+// Function to show the previous slide
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + document.querySelectorAll('.slider-item').length) % document.querySelectorAll('.slider-item').length;
+    updateSlider();
+}
+
+// Function to show the next slide
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % document.querySelectorAll('.slider-item').length;
+    updateSlider();
+}
+
+// Function to update the slider display based on the current index
+function updateSlider() {
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    const itemWidth = document.querySelector('.slider-item').offsetWidth;
+    const translateValue = -currentIndex * itemWidth;
+    sliderWrapper.style.transform = `translateX(${translateValue}px)`;
+
+    // Update active dot
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active-dot', index === currentIndex);
+    });
+}
+
+// Event listeners for each dot
+const dots = document.querySelectorAll('.dot');
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlider();
+    });
+});
+
+    
+
+
+
+</script>
+
+
 </body>
 </html>
