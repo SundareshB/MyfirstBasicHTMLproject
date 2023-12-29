@@ -2,89 +2,237 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>  
     <style>
-      body {
-  background-image: url("bg.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+        /* Styles for the slider container */
+          
+        nav {
+            background: linear-gradient(to right, #ff6b6b, #556270);
+            width: 100%;
+            overflow: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            padding: 0 20px;
+            box-sizing: border-box;
+            color: #fff;
+        }
+        nav .right-side {
+            display: flex;
+            gap: 10px;
+        }
+
+        nav .right-side a {
+          text-decoration: none;
+            color: #fff;
+            font-weight: bold ;
+            transition: color 0.3s, font-weight 0.3s;
+        }
+
+        nav .right-side a:hover {
+            text-decoration: none;
+            color: #ddd;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: normal;
+            transition: color 0.3s, font-weight 0.3s;
+        }
+body {
+    background-color: #f2f2f2; /* Light gray background */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Default text color */
 }
-h1{
-        color: rgb(255, 255, 255);
-    }
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+.back{
+            margin-left: 10px;
+            text-decoration: none;
+            color: #555;
+            font-weight: bold ;
+            transition: color 0.3s, font-weight 0.3s;
+        }
+
+.back:hover {
+    text-decoration: none;
+            color: #a49494;
+            font-weight: bold;
+}
+
+        .slider-container {
+            width: 400px;
+            margin: auto;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        /* Styles for the slider wrapper to hold all images */
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 300%; /* Set the width to three times the container width (for three images) */
+        }
+
+        /* Style for each image in the slider */
+        .slider-item {
+            width: 100%; /* Set the width to match the container */
+            height: 550px; /* Set a fixed height */
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .slider-item img {
+            width: 100%; /* Make the image fill the container */
+            height: 100%;
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+        }
+
+        /* Style for the navigation buttons (prev/next) */
+        .slider-btn {
+            cursor: pointer;
+            position:absolute;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            background-color: #333;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
+        }
+        
+
+.dot-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Add some top margin for spacing */
+}
+
+/* Style for each dot */
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Active dot style */
+.active-dot {
+    background-color: #717171;
+}
+        
+        
     </style>
 </head>
-<body><center>
-    <h1>Starboy <br>Song By The Weeknd,Daft Punk</h1>
-    <img src="star.jpg" height="400" width="400"><br><br>
-    <audio controls>
-      <source src="starboy.mp3" type="audio/mpeg">
-    </audio><br><br><br><br><br><br>
-    <p><h1  style="font-family: sans-serif;"> I'm tryna put you in the worst mood, ah <br>
-      P1 cleaner than your church shoes, ah<br>
-      Milli point two just to hurt you, ah<br>
-      All red Lamb' just to tease you, ah<br>
-      None of these toys on lease too, ah<br>
-      Made your whole year in a week too, yah<br>
-      Main bitch out your league too, ah<br>
-      Side bitch out of your league too, ah<br>
-      House so empty, need a centerpiece<br>
-      20 racks a table cut from ebony<br>
-      Cut that ivory into skinny pieces<br>
-      Then she clean it with her face man I love my baby<br>
-      You talking money, need a hearing aid<br>
-      You talking bout me, I don't see the shade<br>
-      Switch up my style, I take any lane<br>
-      I switch up my cup, I kill any pain<br>
-      Look what you've done<br>
-      I'm a m***f****' starboy<br>
-      Look what you've done<br>
-      I'm a m***f****' starboy<br>
-      Every day a nigga try to test me, ah<br>
-      Every day a nigga try to end me, ah<br>
-      Pull off in that Roadster SV, ah<br>
-      Pockets overweight, gettin' hefty, ah<br>
-      Coming for the king, that's a far cry, ah<br>
-      I come alive in the fall time, I<br>
-      No competition, I don't really listen<br>
-      I'm in the blue Mulsanne bumping New Edition<br>
-      House so empty, need a centerpiece<br>
-      20 racks a table cut from ebony<br>
-      Cut that ivory into skinny pieces<br>
-      Then she clean it with her face man I love my baby<br>
-      You talking money, need a hearing aid<br>
-      You talking bout me, I don't see the shade<br>
-      Switch up my style, I take any lane<br>
-      I switch up my cup, I kill any pain<br>
-      Look what you've done<br>
-      I'm a m***f****' starboy<br>
-      Look what you've done<br>
-      I'm a m***f****' starboy<br>
-      Let a nigga brag Pitt<br>
-      Legend of the fall took the year like a bandit<br>
-      Bought mama a crib and a brand new wagon<br>
-      Now she hit the grocery shop looking lavish<br>
-      Star Trek roof in that Wraith of Khan<br>
-      Girls get loose when they hear this song<br>
-      100 on the dash get me close to God<br>
-      We don't pray for love, we just pray for cars<br>
-      House so empty, need a centerpiece<br>
-      20 racks a table cut from ebony<br>
-      Cut that ivory into skinny pieces<br>
-      Then she clean it with her face man I love my baby<br>
-      You talking money, need a hearing aid<br>
-      You talking 'bout me, I don't see the shade<br>
-      Switch up my style, I take any lane<br>
-      I switch up my cup, I kill any pain<br>
-      Look what you've done<br>
-      I'm a m***f****' starboy<br>
-      Look what you've done<br>
-      I'm a m***f****' starboy<br>
-      Look what you've done<br>
-      I'm a m***f****' starboy<br>
-      Look what you've done<br>
-      I'm a m***f****' starboy<br></h1></p></center>
+<body>
+    
+ <nav> <a href="https://www.instagram.com/football.partner7?igshid=OGQ5ZDc2ODk2ZA==">
+    <h1>FOOTBALL PARTNERS</h1>
+  </a>
+  <div class="right-side">
+    <a href="contact.html">CONTACT  </a>
+    <a href="https://www.instagram.com/football.partner7?igshid=OGQ5ZDc2ODk2ZA==">INSTAGRAM</a>
+    <!-- Add more sections as needed -->
+  </div>
+  </nav>  <br>
+  <!--BACK BUTTON-->
+  
+    <a  class="back" href="football.html">BACK</a> 
+<br><br><br> 
+
+<div class="slider-container">
+    <div class="slider-wrapper">
+        <div class="slider-item"><img src="f1.jpg" alt="Image 1"></div>
+        <div class="slider-item"><img src="f1.jpg" alt="Image 2"></div>
+        <div class="slider-item"><img src="f1.jpg" alt="Image 3"></div>
+        <!-- Add more slider items with different images -->
+    </div>
+    <button class="slider-btn prev-btn" onclick="prevSlide()">&#10094;</button>
+    <button class="slider-btn next-btn" onclick="nextSlide()">&#10095;</button>
+
+</div>
+ <div class="dot-container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+</div>
+
+
+
+<script>
+   let currentIndex = 0;
+
+// Function to show the previous slide
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + document.querySelectorAll('.slider-item').length) % document.querySelectorAll('.slider-item').length;
+    updateSlider();
+}
+
+// Function to show the next slide
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % document.querySelectorAll('.slider-item').length;
+    updateSlider();
+}
+
+// Function to update the slider display based on the current index
+function updateSlider() {
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    const itemWidth = document.querySelector('.slider-item').offsetWidth;
+    const translateValue = -currentIndex * itemWidth;
+    sliderWrapper.style.transform = `translateX(${translateValue}px)`;
+
+    // Update active dot
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active-dot', index === currentIndex);
+    });
+}
+
+// Event listeners for each dot
+const dots = document.querySelectorAll('.dot');
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlider();
+    });
+});
+
+    
+
+
+
+</script>
+
+
 </body>
 </html>
