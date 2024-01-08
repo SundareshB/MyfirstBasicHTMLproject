@@ -97,13 +97,6 @@ section {
             left: 20px;
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
         }
-             @media (max-width: 768px) {
-            .circle-button {
-                top: -20px;
-                left: 10px;
-                padding: 10px;
-            }
-        }
 
 </style>  
 </head>
@@ -112,31 +105,29 @@ section {
   <h1>FOOTBALL PARTNERS</h1></a>
   
 <div class="right-side">
-  <a href="#contact">CONTACT  </a>
-  <a href="https://www.instagram.com/football.partner7?igshid=OGQ5ZDc2ODk2ZA==">INSTAGRAM</a>
-  <!-- Add more sections as needed -->
+  <a href="#contact">ABOUT    </a>
+  <a href="#contact">CONTACT    </a>
+  <a id="whatsappLinkContainer"></a>
+  <a href="https://www.instagram.com/football.partner7?igshid=OGQ5ZDc2ODk2ZA==">INSTAGRAM    </a>
+  
 </div>
     
 </nav><br><br><br><br><br><br>
  
     <center>
-    <a href="star.html">
-        <img src="f1.jpg"  height="450" width="450">
-        <h1>shoes <br>shoesshoesshoesshoesshoes</h1>
+    <a href="f1.html">
+        <img src="jpg/nike.jpg"  height="450" width="450">
+        <h1>NIKE <br>shoesshoesshoesshoesshoes</h1>
       </a><br><br>
-      <a href="f1.html">
-        <img src="f1.jpg"  height="450" width="450">
-        <h1>shoes <br>shoesshoesshoesshoesshoes</h1>
+      <a href="f2.html">
+        <img src="jpg/adidas.jpg"  height="450" width="450">
+        <h1>ADIDAS<br>shoesshoesshoesshoesshoes</h1>
       </a><br><br>
-      <a href="f1.html">
-        <img src="f1.jpg"  height="450" width="450">
-        <h1>shoes <br>shoesshoesshoesshoesshoes</h1>
+      <a href="f3.html">
+        <img src="jpg/puma.jpg"  height="450" width="450">
+        <h1>PUMA <br>shoesshoesshoesshoesshoes</h1>
       </a><br><br>
-      <a href="f1.html">
-        <img src="f1.jpg"  height="450" width="450">
-        <h1>shoes <br>shoesshoesshoesshoesshoes</h1>
-      </a><br><br>
-      <a href="f1.html">
+      <a href="f4.html">
         <img src="f1.jpg"  height="450" width="450">
         <h1>shoes <br>shoesshoesshoesshoesshoes</h1>
       </a><br><br>
@@ -146,17 +137,24 @@ section {
     <section>
       <center>
         <h2>About </h2>
-        <p>abcdgnrfugfgf fgflkg </p>
+        <p>abcdgnrfugfgf fgflkg 
+          vfibvobvf fcbcdcdccdc
+          cd
+          cdcdcd
+          cdcdcd
+          cd
+        </p>
       </center>  
     </section>
     
     <!-- Contact Section -->
     <section>
     <center>
-        <h2>Contact </h2>
-        <p>fggf sgb fgf bgf</p>
-      </center>
-    </section>
+        <h2>Contact</h2>
+    </center>
+    contact on 123243341213.. for more details
+</section>
+
 
 
 <a id="contact">
@@ -169,6 +167,19 @@ section {
       function goToTop() {
           window.scrollTo({ top: 0, behavior: 'smooth' });
       }
+      var phoneNumber = '7795527118';
+
+    // Create the WhatsApp URL
+    var whatsappURL = 'https://wa.me/' + phoneNumber;
+
+    // Create a link element
+    var whatsappLink = document.createElement('a');
+    whatsappLink.href = whatsappURL;
+    whatsappLink.target = '_blank';
+    whatsappLink.textContent = 'WHATSAPP';
+
+    // Append the link to the container
+    document.getElementById('whatsappLinkContainer').appendChild(whatsappLink);
   </script>
     
 </body>
