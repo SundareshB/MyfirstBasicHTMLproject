@@ -4,42 +4,64 @@
         <style>
         
         nav {
-            background: linear-gradient(to right, #ff6b6b, #556270);
-            width: 100%;
-            overflow: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-            position: relative;
-            padding: 0 20px;
-            box-sizing: border-box;
-            color: #fff;
-        }
-        nav .right-side {
-            display: flex;
-            gap: 10px;
-        }
+    background: linear-gradient(to right, #ff6b6b, #556270);
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center; /* Center text in nav */
+}
 
-        nav .right-side a {
-          text-decoration: none;
-            color: #fff;
-            font-weight: bold ;
-            transition: color 0.3s, font-weight 0.3s;
-        }
+h1 {
+    font-size: 24px; /* Adjust the font size as needed */
+}
 
-        nav .right-side a:hover {
-            text-decoration: none;
-            color: #ddd;
-            font-weight: bold;
-        }
+nav .right-side {
+    display: flex;
+    gap: 10px;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: normal;
-            transition: color 0.3s, font-weight 0.3s;
-        }
+nav .right-side a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s, font-weight 0.3s;
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 28px; /* Adjust the font size for mobile devices */
+    }
+
+    nav .right-side {
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+
+    nav .right-side a {
+        font-size: 20px; /* Adjust the font size for mobile devices */
+    }
+}
+
+nav .right-side a:hover {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: normal;
+    transition: color 0.3s, font-weight 0.3s;
+}
+
 body {
     background-color: #f2f2f2; /* Light gray background */
     margin: 0;
@@ -101,16 +123,14 @@ section {
 </style>  
 </head>
 <body>
-<nav> <a href="https://www.instagram.com/football.partner7?igshid=OGQ5ZDc2ODk2ZA==">
-  <h1>FOOTBALL PARTNERS</h1></a>
-  
+<nav> 
+  <a href="https://www.instagram.com/football.partner7?igshid=OGQ5ZDc2ODk2ZA=="><h1>FOOTBALL PARTNERS</h1></a>  
 <div class="right-side">
   <a href="#contact">ABOUT    </a>
   <a href="#contact">CONTACT    </a>
   <a id="whatsappLinkContainer"></a>
   <a href="https://www.instagram.com/football.partner7?igshid=OGQ5ZDc2ODk2ZA==">INSTAGRAM    </a>
-  
-</div>
+  </div>
     
 </nav><br><br><br><br><br><br>
  
